@@ -1,31 +1,49 @@
 import React, { useEffect, useState } from "react";
-import PictureCard from './PictureCard'
+import PictureCard from "./PictureCard";
+import "../css/picture.css";
 
 import axios from "axios";
 
 export default function Picture() {
-    const [pictureData, setPictureData] = useState([]);
+  const [pictureData, setPictureData] = useState({});
 
-    useEffect(() => {
-        axios.get(`https://celebs-dead-or-alive.herokuapp.com/celebs`)
-        .then(res => {
-            console.log(res.data);
-            setPictureData(res.data);
-            console.log()
+  async function fetchData() {
+    const randomId = () => {
+      return Math.floor(Math.random() * 52);
+    };
 
-        })
-        .catch(err => {
-            console.log('data error', err)
-        })
-    }, [])
-  
-    return (
-    <div>
-            {/* {pictureData.map(item => {
-                return <img alt="alt" src={item.image_url}/>
-            })} */}
+    await axios
+      .get(`https://celebs-dead-or-alive.herokuapp.com/celebs`)
+      .then(res => {
+        console.log(res.data, "DATA");
+        setPictureData(res.data[randomId()]);
+        console.log(randomId());
+      })
+      .catch(err => {
+        console.log("data error", err);
+      });
+  }
 
-            {pictureData.map(item => {
+  useEffect(() => {
+    fetchData();
+  }, [setPictureData]);
+
+  // useEffect(() => {
+  //     axios.get(`https://celebs-dead-or-alive.herokuapp.com/celebs`)
+  //     .then(res => {
+  //         console.log(res.data);
+  //         setPictureData(res.data);
+  //         console.log()
+
+  //     })
+  //     .catch(err => {
+  //         console.log('data error', err)
+  //     })
+  // }, [])
+
+  return (
+    <div className="picture">
+      {/* {pictureData.map(item => {
                 return (
                     <PictureCard 
                         key={item.id}
@@ -33,11 +51,10 @@ export default function Picture() {
                         image_url={item.image_url}
                     />
                 )
-            })}
-        
+            })} */}
+      <PictureCard data={pictureData} />
 
-        
+      {/* <PictureCard picture={pictureData[pictureIndex]} /> */}
     </div>
-    );
-  }
-  
+  );
+}
