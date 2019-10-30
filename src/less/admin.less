@@ -1,0 +1,42 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    text-decoration: underline;
+  }
+  .user-wrapper {
+    display: flex;
+    padding: 30px;
+
+    .userBox {
+      padding: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+      margin: 0 5px;
+
+      p {
+        margin: 0 0 8px;
+      }
+
+      .iconBox {
+        display: flex;
+        justify-content: center;
+        background-color: darken(slategray, 20%);
+        padding: 5px 0;
+
+        i.icon {
+          font-size: 0.85rem;
+          cursor: pointer;
+          position: relative;
+          color: white;
+
+          &:hover {
+            color: lighten(dodgerblue, 20%);
+          }
+        }
+      }
+    }
+  }
+}

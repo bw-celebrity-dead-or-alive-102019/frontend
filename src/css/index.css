@@ -125,6 +125,218 @@ table {
 * {
   box-sizing: border-box;
 }
+.login-form-container {
+  width: fit-content;
+}
+.login-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.login-form-container form input {
+  width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  outline: none;
+}
+.login-form-container form button {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.login-form-container form button:hover {
+  background-color: #005db7;
+}
+.login-form-container form .message {
+  margin-top: 15px;
+  text-align: center;
+  padding: 12px 0;
+  width: 100%;
+}
+.login-form-container form .error {
+  background-color: #ffe5e5;
+  color: #cc0000;
+  font-weight: bold;
+  border: 2px solid #cc0000;
+}
+.nav {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+.nav .home {
+  color: #434d57;
+  cursor: pointer;
+}
+.nav .home:hover {
+  color: slategray;
+}
+.nav .quizlink,
+.nav .admin {
+  font-weight: bold;
+  color: #434d57;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 0 0 12px;
+}
+.nav .quizlink:hover,
+.nav .admin:hover {
+  color: #8d9aa6;
+}
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin h2 {
+  text-decoration: underline;
+}
+.admin .user-wrapper {
+  display: flex;
+  padding: 30px;
+}
+.admin .user-wrapper .userBox {
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin: 0 5px;
+}
+.admin .user-wrapper .userBox p {
+  margin: 0 0 8px;
+}
+.admin .user-wrapper .userBox .iconBox {
+  display: flex;
+  justify-content: center;
+  background-color: #434d57;
+  padding: 5px 0;
+}
+.admin .user-wrapper .userBox .iconBox i.icon {
+  font-size: 0.85rem;
+  cursor: pointer;
+  position: relative;
+  color: white;
+}
+.admin .user-wrapper .userBox .iconBox i.icon:hover {
+  color: #84c2ff;
+}
+.card {
+  text-align: center;
+}
+.card h2 {
+  margin: 0 0 5px !important;
+}
+.card div.content.button-container {
+  padding: 0 !important;
+}
+.card div.content.button-container button {
+  margin: 0;
+  width: 50%;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 1.3rem;
+  color: white;
+}
+.card div.content.button-container button:hover {
+  color: white;
+}
+.card div.content.button-container .dead-btn {
+  background-color: #990000;
+}
+.card div.content.button-container .dead-btn:hover {
+  background-color: #cc0000;
+}
+.card div.content.button-container .alive-btn {
+  background-color: #21653f;
+}
+.card div.content.button-container .alive-btn:hover {
+  background-color: seagreen;
+}
+.card .card-icon {
+  position: absolute;
+  z-index: 10;
+  font-size: 15rem;
+  top: 34%;
+  left: 7.5%;
+  -webkit-text-stroke: 5px white;
+}
+.card .check {
+  color: #00ff00;
+}
+.card .close {
+  color: #cc0000;
+}
+.card .dimmer {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  z-index: 5 !important;
+}
+.card .card-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  visibility: hidden;
+  margin: 20px 0;
+}
+.quiz-container div.ui.card {
+  margin: 0;
+  border: none;
+  transition-duration: 0.2s;
+}
+.quiz-container div.card-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.quiz-init {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+  align-items: center;
+  padding: 50px 30px;
+  background-color: #e8f4f8;
+  border-radius: 4px;
+  position: relative;
+}
+.quiz-init button {
+  width: 50%;
+  padding: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  background-color: #e63e00;
+  cursor: pointer;
+  margin: 12px 0 0;
+  outline: none;
+  border: none;
+}
+.quiz-init button:hover {
+  background-color: #ff581a;
+}
 h1 {
   font-size: 3rem;
+}
+.App .main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+.App .main-wrapper .app-h1 {
+  margin-bottom: 30px;
 }

@@ -1,0 +1,75 @@
+.login-form-container {
+  width: fit-content;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 300px;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      margin-bottom: 12px;
+      outline: none;
+    }
+
+    button {
+      background-color: dodgerblue;
+      color: white;
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(dodgerblue, 20%);
+      }
+    }
+
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      padding: 12px 0;
+      width: 100%;
+    }
+
+    .error {
+      background-color: lighten(red, 45%);
+      color: darken(red, 10%);
+      font-weight: bold;
+      border: 2px solid darken(red, 10%);
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  padding: 15px;
+  border: 1px solid #ccc;
+
+  .home {
+    color: darken(slategray, 20%);
+    cursor: pointer;
+
+    &:hover {
+      color: slategray;
+    }
+  }
+
+  .quizlink,
+  .admin {
+    font-weight: bold;
+    color: darken(slategrey, 20%);
+    cursor: pointer;
+    user-select: none;
+    margin: 0 0 0 12px;
+
+    &:hover {
+      color: lighten(slategrey, 10%);
+    }
+  }
+}

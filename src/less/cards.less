@@ -1,0 +1,71 @@
+.card {
+  text-align: center;
+
+  h2 {
+    margin: 0 0 5px !important;
+  }
+
+  div.content.button-container {
+    padding: 0 !important;
+
+    button {
+      margin: 0;
+      width: 50%;
+      border-radius: 0;
+      padding: 15px 0;
+      font-size: 1.3rem;
+      color: white;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .dead-btn {
+      background-color: darken(red, 20%);
+
+      &:hover {
+        background-color: darken(red, 10%);
+      }
+    }
+
+    .alive-btn {
+      background-color: darken(seagreen, 10%);
+
+      &:hover {
+        background-color: seagreen;
+      }
+    }
+  }
+
+  .card-icon {
+    position: absolute;
+    z-index: 10;
+    font-size: 15rem;
+    top: 34%;
+    left: 7.5%;
+    -webkit-text-stroke: 5px white;
+  }
+
+  .check {
+    color: lighten(green, 25%);
+  }
+
+  .close {
+    color: darken(red, 10%);
+  }
+
+  .dimmer {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    z-index: 5 !important;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+}
